@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteRule ^.htaccess$ - [F]
+
+RewriteBase /web/
+
+Options -Indexes
+Options +FollowSymlinks
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php
